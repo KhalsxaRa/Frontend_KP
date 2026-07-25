@@ -1,7 +1,13 @@
 import axios from "axios";
 
+const getBaseUrl = () => {
+  const url = "https://backendkp-production-679e.up.railway.app/api";
+    return url;
+  
+};
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://backendkp-production-679e.up.railway.app",
+  baseURL: getBaseUrl(),
 });
 
 api.interceptors.request.use((config) => {
@@ -15,3 +21,4 @@ api.interceptors.request.use((config) => {
 });
 
 export default api;
+
