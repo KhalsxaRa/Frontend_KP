@@ -37,7 +37,7 @@ export default function Login() {
       localStorage.setItem("user", JSON.stringify(res.data.user));
       showToast("Login berhasil! Selamat datang kembali 👋", "success");
       setTimeout(() => {
-        navigate(res.data.user.email === "admin@Probits.com" ? "/admin" : "/dashboard");
+        navigate(res.data.user.role === "admin"  ? "/admin" : "/dashboard");
       }, 1200);
     } catch (error) {
       showToast(error.response?.data?.message || "Email atau password salah.", "error");
