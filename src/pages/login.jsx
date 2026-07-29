@@ -15,9 +15,10 @@ export default function Login() {
 
   const [form, setForm] = useState({ email: "", password: "" });
 
-  const googleLogin = useGoogleLogin({
+const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
-      localStorage.setItem("googleAccessToken", tokenResponse.access_token);
+       const res = await api.post("/auth/login", form);
+      localStorage.setItem("token", tokenResponse.token);
       showToast("Login dengan Google berhasil! Mengalihkan...", "success");
       setTimeout(() => navigate("/dashboard"), 1200);
     },

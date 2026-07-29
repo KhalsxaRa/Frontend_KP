@@ -8,10 +8,49 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
-dist-ssr
-*.local
 
+# Environment
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+*.local
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage/
+
+# Build
+dist-ssr
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+
+.idea/
+
+# Sequelize
+seeders/*.bak
+migrations/*.bak
+
+# Uploads
+uploads/
+temp/
+
+# Cache
+.cache/
+
+# Optional
+*.rar
+*.zip
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

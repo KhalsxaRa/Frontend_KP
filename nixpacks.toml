@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["nodejs_22", "chromium", "unzip", "nss", "nspr", "atk", "cups", "pango", "cairo"]
+
+[phases.build]
+cmds = ["npm install"]
+
+[variables]
+# Paksa Puppeteer pakai Chromium dari sistem (Nix), bukan download sendiri
+PUPPETEER_SKIP_CHROMIUM_DOWNLOAD = "true"
+PUPPETEER_EXECUTABLE_PATH = "/usr/bin/chromium"
+NODE_ENV = "production"
