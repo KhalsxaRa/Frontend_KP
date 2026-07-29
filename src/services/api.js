@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const getBaseUrl = () => {
-  const url = "https://backendkp-production-660e.up.railway.app/api";
+  const url = "https://backendkp-production-660.up.railway.app/api";
     return url;
   
 };
